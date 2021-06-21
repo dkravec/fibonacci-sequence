@@ -1,8 +1,9 @@
 const fs = require("fs");
 
 // SETTING TESTING MODES
-const testingLogs = true;
-const testingLoop = true;
+const testingLogs = false;
+const testingLoop = false;
+const fibonacciLogs = false;
 
 // AMOUNT OF RUNS COUNTER FOR TESTING MODE
 var amountRuns = 0
@@ -22,8 +23,7 @@ const dataStart = {
 readyFolder();
 
 function fibonacci(pastResult) {
-    if (testingLogs) amountFibonacci = amountFibonacci + 1;
-
+    if (testingLogs || fibonacciLogs) amountFibonacci = amountFibonacci + 1;
     // CHECKS IF IT IS THE FIRST TIME FUNNING THE FIBONACCI FUNCTION
     if (pastResult.firstRun) {
         const dataSend = {
@@ -56,11 +56,15 @@ function fibonacci(pastResult) {
         IF THE SEQUENCE ENDS UP WITH INFINITY (CAN'T GO FUTHER)
         WILL RETURN FUNCTION TO CHECK DIR, AND SENDS IN NEXT FUNCTION TO RUN
     */
+
     if (data.second == Infinity) return checkingAnswerAllDir('./answer/all', writeResults());
 
     // PUSHES DATA TO ARRAYS
     results.push(data);
     justAnswers.push(data.second);
+
+    // CONSOLE LOGS FIBONACCI SEQUENCE 
+    if (fibonacciLogs) console.log(`${amountFibonacci} | ${result} | ${first} + ${second}`)
 
     // RE-RUNS FIBONACCI FUNCTION, TO FIND NEXT NUMBER
     fibonacci(data);

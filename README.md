@@ -10,10 +10,10 @@ Project created by Daniel Kravec, on June 20th 2021.
     - [Information](#information)
     - [Versions](#versions)
 - [Usage](#usage)
-    - [Run Code](#run-code)
-    - [Enable testing modes](#enable-testing-modes)
-        - [Enable testing logs](#enable-testing-logs)
-        - [Enable testing loops](#enable-testing-loops)
+- [Enable testing modes](#enable-testing-modes)
+    - [Enable testing logs](#enable-testing-logs)
+    - [Enable testing loops](#enable-testing-loops)
+    - [Enable fibonacci logs](#enable-fibonacci-logs)
 
 <br />
 
@@ -44,7 +44,7 @@ There are 3 types of data returned.
 <br />
 
 ## Information
-- Gives you as many numbers of the sequence as possible. (Around 1475 results)
+- Gives you as many numbers of the sequence as possible. (Average of 1474 results per single run)
 - Enable testing mode as wanted.
     - Console logs current events.
 
@@ -61,16 +61,25 @@ Complete version history of the `Fibonacci Sequence` project.
     - (current) (result).json
 - Created README file.
 - Added comments to code.
-
+### 1.0.1 (2.2021.06.21)
+- Updated README file to cleaner and more information.
+- Changed default testing mode.
+- Added ignore to `./answer`
+- Added new testing mode: [Fibonacci logs](#enable-fibonacci-logs)
 <br />
 
 # Usage
-## Run Code
-Use "`node .`" in termnial with current path as the main folder to run the program.
+You must have node installed on your computer.
+
+In terminal go to the path where the project folder is located.
+
+Type in the command "`node .`" in the termnial, making sure it has the correct path.
+
+The results will go in `./answer` once completed. 
 
 <br />
 
-## Enable testing modes
+# Enable testing modes
 There are 2 built in testing modes
 - Testing logs -> Adds console logs for current.
 - Testing loops -> Loops code for batch testing.
@@ -78,7 +87,7 @@ There are 2 built in testing modes
 
 <br />
 
-### Enable testing logs
+#### Enable testing logs
 Add console logs, showing what code is currently doing.
 
 Current line 4: [index.js](./index.js)
@@ -89,7 +98,7 @@ Change to:
 
 <br />
 
-### Enable testing loops.
+#### Enable testing loops
 
 Loop code to test command at large, repeating itself.
 
@@ -98,3 +107,14 @@ Current line 5: [index.js](./index.js)
 
 Change to:
 - `const testingLoop = true;`
+
+### Enable fibonacci logs
+Console log all cacluations made by the fibonacci sequence.
+
+Logs: "`[current amount of runs by function] | [result] | [second last number] | [last number]`"
+
+Current line 6: [index.js](./index.js)
+- `const fibonacciLogs = false;`
+
+Change to:
+- `const fibonacciLogs = true;`
