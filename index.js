@@ -96,7 +96,7 @@ function writeResults() {
     // SAVES EACH RESULT IN EXTRA FILE
     for (result of results) {
         currentResult = currentResult + 1;
-        let saveResult = JSON.stringify(results);
+        let saveResult = JSON.stringify(result);
         fs.writeFile(`./answer/all/${currentResult} ${result.second}.json`, saveResult, (err) => {
             if (err) throw err;
         });
