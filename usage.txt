@@ -1,0 +1,62 @@
+Future Functions will be created into the Fibonacci Sequence project.
+
+functions you can run
+
+indexArray Function
+
+fibseq.indexArray(number / array, lowest / highest
+returns index in sequence
+check justAnswers.json for array of numbers
+
+examples
+- fibseq.indexArray(3)
+returns: 2
+- fibseq.indexArray(5) 
+returns: 8
+
+
+closestIndex function:
+fibseq.closestIndex(number / array, up / down?); 
+fibseq.closestIndex(data, rounding?);
+
+returns closest number to that number input
+
+you can return mutiple into an array
+will take closest of each + closest of all
+
+
+you can add rounding type, (up / down)
+by default rounding is up
+
+// example array with default rounding
+const array = [1, 3, 4, 29]
+fibseq.closestResult(array)
+returns : [1, 3, 5, 34] 
+
+
+// example array plus rounding up
+const array = [1, 3, 4, 29]
+fibseq.closestResult(array, up)
+returns : [1, 3, 5, 34] // which is 
+
+// example array plus rounding down
+const array = [1, 3, 4, 29]
+fibseq.closestResult(array, down)
+returns : [1, 3, 3, 21] // which is 
+
+
+// example number with default rounding #1
+fibseq.closestResult(3)
+returns : 3 // which is 3
+
+// example number with default rounding #2
+fibseq.closestResult(4)
+returns : 3  // which is 4
+
+// example number with rounding down
+fibseq.closestResult(4, down)
+returns : 3  // which is 3
+
+// example number with rounding up
+fibseq.closestResult(4, up)
+returns : 3  // which is 4

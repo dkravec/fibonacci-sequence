@@ -1,9 +1,10 @@
 const fs = require("fs");
+const readFiles = require('./scr/functions/readFiles/')
+const checkDirectory = require('./scr/functions/checkDirectory/')
 
 // SETTING TESTING MODES
-const testingLogs = false;
-const testingLoop = false;
-const fibonacciLogs = false;
+const testModes = require('./testModes.json')
+const { testingLogs, testingLoop, fibonacciLogs } = testModes
 
 // AMOUNT OF RUNS COUNTER FOR TESTING MODE
 var amountRuns = 0
@@ -16,22 +17,39 @@ var justAnswers = [];
 const dataStart = {
     "first" : 1,
     "second" : 1,
-    "firstRun" : true
+    "firstRun" : 1
 };
+
+if (testingLogs) console.log(testModes)
 
 // READYS DIRECTORIES
 readyFolder();
+
 
 function fibonacci(pastResult) {
     if (testingLogs || fibonacciLogs) amountFibonacci = amountFibonacci + 1;
     // CHECKS IF IT IS THE FIRST TIME FUNNING THE FIBONACCI FUNCTION
     if (pastResult.firstRun) {
-        const dataSend = {
-            "oldFirst" : 1,
-            "first" : 1,
-            "second" : 1,
-        };
+        var dataSend
+        if (pastResult.firstRun == 1) {
+            dataSend = {
+                "oldFirst" : 1,
+                "first" : 1,
+                "second" : 1,
+                "firstRun" : 2,
+            };
+        }
+        else {
+            dataSend = {
+                "oldFirst" : 1,
+                "first" : 1,
+                "second" : 1,
+            };
+        }
+        
         results.push(dataSend);
+        justAnswers.push(dataSend.second);
+        return fibonacci(dataSend)
     };
 
     // SET UP FOR LAST 2 NUMBERS FOR ADDING
@@ -64,7 +82,7 @@ function fibonacci(pastResult) {
     justAnswers.push(data.second);
 
     // CONSOLE LOGS FIBONACCI SEQUENCE 
-    if (fibonacciLogs) console.log(`${amountFibonacci} | ${result} | ${first} + ${second}`)
+    if (fibonacciLogs) console.log(`${amountFibonacci} - ${amountRuns} | ${result} | ${first} + ${second}`)
 
     // RE-RUNS FIBONACCI FUNCTION, TO FIND NEXT NUMBER
     fibonacci(data);
@@ -125,15 +143,16 @@ function checkTimesAmonut(number) {
 
 // SETS UP ALL THE REQUIRED FOLDERS
 function readyFolder() {
-    if (testingLogs) {
-        console.log("--- Starting Fibonacci Squence ----");
+    if (testingLogs || fibonacciLogs) {
+        if (testingLogs) console.log("--- Starting Fibonacci Squence ----");
 
         // ADDS TO THE AMOUNT OF RUNS
         amountRuns = amountRuns + 1;
     };
     
     // REMOVES ALL THE OLD ANSWERS IF THERE ARE ANY
-    const ansDir = checkDirectory('./answer');
+    const ansDir = checkDirectory('./answer', testModes)
+
     if (ansDir) {
         try {
             fs.rmdirSync(`./answer`, { recursive: true });
@@ -153,13 +172,13 @@ function readyFolder() {
             console.log(err);
         }
         else {
-            if (testingLogs) console.log("Made './answer' directory");
+            if (testingLogs) console.log("Created './answer' directory");
 
             // MAKES DIRECTORY FOR ALL ANSWERS
             fs.mkdir(`./answer/all`, function(err) {
                 if (err) console.log(err);
                 else {
-                    if (testingLogs) console.log("Made './answer/all' directory.");
+                    if (testingLogs) console.log("Created './answer/all' directory.");
 
                     // RUNS MAIN FIBONACCI FUNCTION 
                     fibonacci(dataStart);
@@ -175,11 +194,12 @@ function readyFolder() {
     RUNS FUNCTION REQUESTED BY CALL
 */
 async function checkingAnswerAllDir(path, functionToRun) {
-    const checkAnsDir = checkDirectory(path);
+    const checkAnsDir = checkDirectory(path, testModes);
     if (checkAnsDir != true) setTimeout(() => {  checkingAnswerAllDir(path) }, 100);
     else functionToRun;
 };
 
+/*
 // CHECK IF THERE IS A DIRECTORY
 function checkDirectory(path) {
     try {
@@ -189,3 +209,4 @@ function checkDirectory(path) {
         return false;
     };
 };
+*/
