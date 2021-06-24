@@ -25,6 +25,10 @@ if (testingLogs) console.log(testModes)
 // READYS DIRECTORIES
 readyFolder();
 
+function checktime() {
+    return new Date().getTime();
+}
+const startime = checktime()
 
 function fibonacci(pastResult) {
     if (testingLogs || fibonacciLogs) amountFibonacci = amountFibonacci + 1;
@@ -114,9 +118,12 @@ function writeResults() {
         if (err) throw err
         else {
             if (testingLogs) {
+                const endtime = checktime()
+
                 const timesAmountRuns = checkTimesAmonut(amountRuns);
                 const timesRunsRibonacci = checkTimesAmonut(amountFibonacci);
                 console.log("Saved results.");
+                console.log(`${endtime - startime} ms total`)
                 console.log(`Code ran total of ${amountRuns} ${timesAmountRuns}`)
                 console.log(`Ran fibonacci function a total of ${amountFibonacci} ${timesRunsRibonacci}`)
                 console.log("---- Done Fibonacci Sequence ----");

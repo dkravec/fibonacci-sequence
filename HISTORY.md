@@ -11,7 +11,6 @@ June 20-21, 2021
 - Created README file.
 - Added comments to code.
 
-<br />
 
 1.0.1 (2.2021.06.21)
 ===================
@@ -23,7 +22,6 @@ June 21st, 2021
 - Added ignore to `./answer`
 - Added new testing mode: [Fibonacci logs](#enable-fibonacci-logs)
 
-<br />
 
 1.1 (3.2021.06.21)
 ===================
@@ -40,7 +38,6 @@ June 21st, 2021
     - Added logging
 - Added the current total runs in Fibonacci logs.
 
-<br />
 
 1.1.1 (4.2021.06.22)
 ===================
@@ -52,7 +49,14 @@ June 22nd, 2021
     - Now saves just single result according to the correct result.
 - Created a HISTORY file for the versions.
 
-<br /> 
+
+1.1.2 (4.2021.06.23)
+===================
+
+June 23rd, 2021
+
+- Has a time reader, console logs time it cool.
+
 
 Future Updates
 ===================

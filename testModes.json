@@ -1,5 +1,5 @@
 {
     "testingLogs" : true,
-    "testingLoop" : false,
+    "testingLoop" : true,
     "fibonacciLogs" : false
 }
