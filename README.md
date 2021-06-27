@@ -1,6 +1,5 @@
 # The Fibonacci Sequence
 Project created by Daniel Kravec, on June 20th 2021. 
-- Last updated: June 21st 2021
 
 <br />
 
@@ -63,12 +62,50 @@ The results will go in `./answer` once completed.
 
 <br />
 
+# Web Package
+Use this web package located in <b> add later </b>
+
+Use one of 2 built in functions. 
+
+How to use javascript file:
+
+You must have the link to the [script](./scr/web/fibseq.js), you may also download the script, and add the script locally from your website's files.
+
+<br />
+
+Add script tag to your html file's head
+
+`<script src="https://gitlab.devray.com/side-projects/fibonacci-sequence/-/blob/master/scr/web/fibseq.js"defer></script>`
+
+View an example:
+
+html page: [html example](./scr/web/html-example/index.html)
+
+javascript file: [javascript example](./scr/web/html-example/script.js)
+
+## All Results Function
+callback: allResults()
+- returns entire sequence in an array
+
+## Index Array Function
+callback: indexArray(number)
+returns the index in sequence for the number(s) input 
+
+- usage: indexArray(number / array)
+
+examples:
+- indexArray(3)
+    - returns: 3
+- indexArray(5)
+    - returns: 8
+
+
 # Enable testing modes
 
 There are 3 built in testing modes
 - Testing logs -> Adds console logs for current.
 - Testing loops -> Loops code for batch testing.
-    - Tested with 825 run with use of fibonacci function 1216875 times.
+    - Tested with 10,3854 run with use of fibonacci function 153,392,343 times.
 - Fibonacci logs -> Adds a console log for each time the fibonacci log is ran.
 <br />
 
@@ -76,7 +113,7 @@ There are 3 built in testing modes
 
 Add console logs, showing what code is currently doing.
 
-Current line 2: [testModes.json](./index.js)
+Current line 2: [testModes.json](./testModes.json)
 - `"testingLogs" : false,`
 
 Change to:
@@ -88,7 +125,7 @@ Change to:
 
 Loop code to test command at large, repeating itself.
 
-Current line 3: [testModes.json](./index.js)
+Current line 3: [testModes.json](./testModes.json)
 - `"testingLoop" : false,`
 
 Change to:
@@ -104,7 +141,7 @@ Fibonacci logs looks like:
 
 `[current amount of runs by function] - [amount runs sequence] | [result] | [second last number] | [last number]`
 
-Current line 4: [testModes.json](./index.js)
+Current line 4: [testModes.json](./testModes.json)
 - `"fibonacciLogs" : false`
 
 Change to:

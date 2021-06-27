@@ -15,7 +15,7 @@ June 20-21, 2021
 1.0.1 (2.2021.06.21)
 ===================
 
-June 21st, 2021
+June 21, 2021
 
 - Updated README file to cleaner and more information.
 - Changed default testing mode.
@@ -26,7 +26,7 @@ June 21st, 2021
 1.1 (3.2021.06.21)
 ===================
 
-June 21st, 2021
+June 21, 2021
 
 - Fixed up README file
 - Adds an extra 1 at start of results.json, and adds both 1s at start of justAnswers.json
@@ -42,7 +42,7 @@ June 21st, 2021
 1.1.1 (4.2021.06.22)
 ===================
 
-June 22nd, 2021
+June 22, 2021
 
 - Fixed /all results.
     - before it would save all results in each file in /all. 
@@ -53,9 +53,27 @@ June 22nd, 2021
 1.1.2 (4.2021.06.23)
 ===================
 
-June 23rd, 2021
+June 23, 2021
 
 - Has a time reader, console logs time it cool.
+
+
+2.0 (5.2021.06.27)
+===================
+
+June 25-26-27, 2021
+
+- Created web package to use in your own website with a example project
+    - with functions : indexArray(), allResults()
+- Separated more functions in main project (getting ready for an npm package)
+- Created index2 + runtest as a testing for the main npm package (not ready)
+    - Index2.js holds the functions for npm package
+    - runtest.js acts as if you were to use an npm package: use `node runtest` to test (currently does nothing)
+- Started package functions
+    - indexArray
+    - allResults (empty)
+    - closetIndex (empty)
+- Updated usage.txt
 
 
 Future Updates

@@ -5,7 +5,7 @@ const checkDirectory = require('./scr/functions/checkDirectory/')
 // SETTING TESTING MODES
 const testModes = require('./testModes.json')
 const { testingLogs, testingLoop, fibonacciLogs } = testModes
-
+const checktime = require('./scr/functions/checktime')
 // AMOUNT OF RUNS COUNTER FOR TESTING MODE
 var amountRuns = 0
 var amountFibonacci = 0
@@ -23,11 +23,8 @@ const dataStart = {
 if (testingLogs) console.log(testModes)
 
 // READYS DIRECTORIES
-readyFolder();
+readyFolder()
 
-function checktime() {
-    return new Date().getTime();
-}
 const startime = checktime()
 
 function fibonacci(pastResult) {
@@ -205,15 +202,3 @@ async function checkingAnswerAllDir(path, functionToRun) {
     if (checkAnsDir != true) setTimeout(() => {  checkingAnswerAllDir(path) }, 100);
     else functionToRun;
 };
-
-/*
-// CHECK IF THERE IS A DIRECTORY
-function checkDirectory(path) {
-    try {
-        var stat = fs.lstatSync(path);
-        return stat.isDirectory();
-    } catch (err) {
-        return false;
-    };
-};
-*/

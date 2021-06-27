@@ -4,7 +4,8 @@
   "description": "Outputs the numbers inside the fibonacci sequence.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runtest": "node runtest.js"
   },
   "author": "",
   "license": "ISC",

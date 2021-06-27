@@ -2,9 +2,19 @@ Future Functions will be created into the Fibonacci Sequence project.
 
 functions you can run
 
-indexArray Function
+## allResults Function
+Web - allResults()
+Package - fibseq.allResults()
+returns all results from sequence in an array
 
-fibseq.indexArray(number / array, lowest / highest
+
+
+## indexArray Function
+Web - indexArray(number)
+Package - fibseq.indexArray(number)
+
+fibseq.indexArray(number / array)
+
 returns index in sequence
 check justAnswers.json for array of numbers
 
@@ -15,9 +25,12 @@ returns: 2
 returns: 8
 
 
-closestIndex function:
+
+## closestIndex function:
+Web - closestIndex(number, rounding?)
+Package - fibseq.closestIndex(data, rounding?);
+
 fibseq.closestIndex(number / array, up / down?); 
-fibseq.closestIndex(data, rounding?);
 
 returns closest number to that number input
 
