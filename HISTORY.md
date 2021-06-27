@@ -75,6 +75,14 @@ June 25-26-27, 2021
     - closetIndex (empty)
 - Updated usage.txt
 
+2.0.1 (6.2021.06.27)
+===================
+
+June 27, 2021
+
+- Updated readme file, 
+    - Doesn't show to link the file from gitlab, and instead download + link locally.
+    - Added web package to table of contents.
 
 Future Updates
 ===================

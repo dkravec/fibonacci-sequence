@@ -8,6 +8,9 @@ Project created by Daniel Kravec, on June 20th 2021.
     - [Code Returns](#code-returns)
     - [Information](#information)
 - [Usage](#usage)
+- [Web Package](#web-package)
+    - [All Results Function](#all-results-function)
+    - [Index Array Function](#index-array-function)
 - [Enable testing modes](#enable-testing-modes)
     - [Enable testing logs](#enable-testing-logs)
     - [Enable testing loops](#enable-testing-loops)
@@ -69,13 +72,13 @@ Use one of 2 built in functions.
 
 How to use javascript file:
 
-You must have the link to the [script](./scr/web/fibseq.js), you may also download the script, and add the script locally from your website's files.
+You must have the download the [script](./scr/web/fibseq.js), and add the script locally from your website's files.
 
 <br />
 
-Add script tag to your html file's head
+Make sure to add a script tag to your html file's head linking the file.
 
-`<script src="https://gitlab.devray.com/side-projects/fibonacci-sequence/-/blob/master/scr/web/fibseq.js"defer></script>`
+`<script src="./scriptpath/fibseq.js"defer></script>`
 
 View an example:
 
