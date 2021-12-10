@@ -50,7 +50,7 @@ June 22, 2021
 - Created a HISTORY file for the versions.
 
 
-1.1.2 (4.2021.06.23)
+1.1.2 (5.2021.06.23)
 ===================
 
 June 23, 2021
@@ -58,7 +58,7 @@ June 23, 2021
 - Has a time reader, console logs time it cool.
 
 
-2.0 (5.2021.06.27)
+2.0 65.2021.06.27)
 ===================
 
 June 25-26-27, 2021
@@ -75,7 +75,7 @@ June 25-26-27, 2021
     - closetIndex (empty)
 - Updated usage.txt
 
-2.0.1 (6.2021.06.27)
+2.0.1 (7.2021.06.27)
 ===================
 
 June 27, 2021
@@ -84,7 +84,7 @@ June 27, 2021
     - Doesn't show to link the file from gitlab, and instead download + link locally.
     - Added web package to table of contents.
 
-2.0.2 (6.2021.12.10)
+2.0.2 (8.2021.12.10)
 ===================
 
 December 10, 2021
@@ -92,6 +92,15 @@ December 10, 2021
 - Pushed to Github
 - Changed usage.txt to USAGE.md
 - updated usage.md to include code boxes
+
+2.0.3 (9.2021.12.10)
+===================
+
+December 10, 2021
+
+- fixed the build numbers in version history
+
+
 
 Future Updates
 ===================
