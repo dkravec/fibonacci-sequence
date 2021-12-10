@@ -84,6 +84,15 @@ June 27, 2021
     - Doesn't show to link the file from gitlab, and instead download + link locally.
     - Added web package to table of contents.
 
+2.0.2 (6.2021.12.10)
+===================
+
+December 10, 2021
+
+- Pushed to Github
+- Changed usage.txt to USAGE.md
+- updated usage.md to include code boxes
+
 Future Updates
 ===================
 
